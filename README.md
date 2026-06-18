@@ -18,6 +18,7 @@ The data already exists on Congress.gov and the state legislature databases. It'
 ## Table of contents
 
 - [What it does](#what-it-does)
+- [Screenshots](#screenshots)
 - [How it works](#how-it-works)
 - [Tech stack](#tech-stack)
 - [Project structure](#project-structure)
@@ -57,6 +58,41 @@ This is the whole thesis in one interaction. The bill's dense statutory text sit
 - **Why this matters to you** — tied to the issues you selected
 
 Every call runs through a strictly nonpartisan system prompt. The model is instructed to present multiple sides, never advocate, and ground every point in the text it was given.
+
+---
+
+## Screenshots
+
+One view per tab. **To add your own:** drop four images into `docs/screenshots/` named exactly `feed.png`, `explain.png`, `representatives.png`, and `alerts.png` — they'll render below automatically. (`.png`, `.jpg`, or `.gif` all work; just keep the filenames or update the paths.)
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Your feed</strong><br/>
+      <em>Recent votes, filtered to the issues you follow.</em><br/><br/>
+      <img src="assets/Feed.png" alt="PolityAI — Your feed tab" width="100%" />
+    </td>
+    <td width="50%" valign="top">
+      <strong>Explain a bill</strong><br/>
+      <em>Statute on the left, plain English on the right — live AI.</em><br/><br/>
+      <img src="assets/Bill_Explainer.png" alt="PolityAI — Explain a bill tab" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>My representatives</strong><br/>
+      <em>Find your officials by address and read their recent votes.</em><br/><br/>
+      <img src="assets/FindRep.png" alt="PolityAI — My representatives tab" width="100%" />
+    </td>
+    <td width="50%" valign="top">
+      <strong>Alerts</strong><br/>
+      <em>Pings when a rep you follow votes on an issue you care about.</em><br/><br/>
+      <img src="assets/Alerts.png" alt="PolityAI — Alerts tab" width="100%" />
+    </td>
+  </tr>
+</table>
+
+> Until you add the files, the four images above will show as broken-image icons on GitHub — that's expected. Create the `docs/screenshots/` folder, commit your four PNGs, and they'll appear.
 
 ---
 
