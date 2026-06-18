@@ -63,8 +63,6 @@ Every call runs through a strictly nonpartisan system prompt. The model is instr
 
 ## Screenshots
 
-One view per tab. **To add your own:** drop four images into `docs/screenshots/` named exactly `feed.png`, `explain.png`, `representatives.png`, and `alerts.png` — they'll render below automatically. (`.png`, `.jpg`, or `.gif` all work; just keep the filenames or update the paths.)
-
 <table>
   <tr>
     <td width="50%" valign="top">
@@ -91,8 +89,6 @@ One view per tab. **To add your own:** drop four images into `docs/screenshots/`
     </td>
   </tr>
 </table>
-
-> Until you add the files, the four images above will show as broken-image icons on GitHub — that's expected. Create the `docs/screenshots/` folder, commit your four PNGs, and they'll appear.
 
 ---
 
