@@ -323,9 +323,3 @@ Deliberately deferred to avoid an "advocacy platform" perception: contacting rep
 ## Disclaimer
 
 PolityAI is **nonpartisan**. It explains legislation and voting records and presents multiple sides; it does not endorse positions, candidates, or parties. It is an information tool, not legal or voting advice. In this prototype, representatives and vote records are illustrative sample data.
-
----
-
-## License
-
-MIT recommended for an open civic tool — add a `LICENSE` file. (Apache-2.0 is also a reasonable choice if you want an explicit patent grant.)
