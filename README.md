@@ -324,12 +324,6 @@ Deliberately deferred to avoid an "advocacy platform" perception: contacting rep
 
 ---
 
-## Contributing
-
-PolityAI is looking for a **technical co-founder** and contributors who care about civic access. If you're a developer who wants real-world impact, or you work in civic tech, policy, or democracy, open an issue or reach out. The highest-leverage first contribution is the real data layer.
-
----
-
 ## Disclaimer
 
 PolityAI is **nonpartisan**. It explains legislation and voting records and presents multiple sides; it does not endorse positions, candidates, or parties. It is an information tool, not legal or voting advice. In this prototype, representatives and vote records are illustrative sample data.
