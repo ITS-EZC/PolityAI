@@ -25,6 +25,7 @@ export default async function handler(req, res) {
       // unique_violation - email already on the list, treat as success
       return res.status(200).json({ ok: true, alreadyOnList: true });
     }
+    console.error("Supabase insert failed:", error);
     return res.status(500).json({ error: "Could not save signup" });
   }
 
