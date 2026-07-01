@@ -390,6 +390,7 @@
   .signup .btn-primary{background:var(--blue);box-shadow:0 8px 22px rgba(59,130,196,.4)}
   .signup .btn-primary:hover{background:var(--blue-bright)}
   .signup-done{color:#CFE6FF;font-weight:500;display:none;align-items:center;gap:9px}
+  .signup-error{color:#FFB4A8;font-weight:500;display:none;align-items:center;gap:9px;margin-top:12px}
  
   /* ---------- Footer ---------- */
   footer.site{padding:54px 0 40px;border-top:1px solid var(--line)}
@@ -807,6 +808,7 @@
         <button class="btn btn-primary" id="signupBtn">Request access <span class="arr">→</span></button>
       </div>
       <div class="signup-done" id="signupDone">✓ You're on the list. We'll be in touch soon.</div>
+      <div class="signup-error" id="signupError">Something went wrong — try again in a moment.</div>
     </div>
   </div>
 </section>
@@ -1012,6 +1014,7 @@
       return;
     }
     signupBtn.disabled = true;
+    $("signupError").style.display = "none";
     fetch("/api/waitlist", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -1027,9 +1030,11 @@
           : "✓ You're on the list. We'll be in touch soon.";
         done.style.display = "flex";
       })
-      .catch(function(){
+      .catch(function(err){
+        console.error("Waitlist signup failed:", err);
         signupBtn.disabled = false;
         emailField.style.borderColor = "#E08A8A";
+        $("signupError").style.display = "flex";
       });
   });
   $("email").addEventListener("input", function(){ this.style.borderColor = ""; });
