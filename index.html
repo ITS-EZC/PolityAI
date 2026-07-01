@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PolityAI — Civic Intelligence</title>
-<meta name="description" content="PolityAI turns dense legislative records and voting data into clear, plain-English answers — so anyone can understand what their government is actually doing." />
+<title>PolityAI | Civic Intelligence</title>
+<meta name="description" content="PolityAI turns dense legislative records and voting data into clear, plain-English answers, so anyone can understand what their government is actually doing." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
@@ -94,6 +94,8 @@
   .btn .arr{transition:transform .2s var(--ease)}
   .btn:hover .arr{transform:translateX(3px)}
   .nav-toggle{display:none}
+  .nav-links .btn-primary{background:var(--blue);color:#fff;box-shadow:0 6px 18px rgba(59,130,196,.35)}
+  .nav-links .btn-primary:hover{background:var(--blue-bright);box-shadow:0 12px 26px rgba(59,130,196,.45)}
  
   /* ---------- Reveal animations ---------- */
   .reveal{opacity:0;transform:translateY(38px);transition:opacity .8s var(--ease), transform .8s var(--ease)}
@@ -231,7 +233,10 @@
   .live-dot{margin-left:auto;font-family:"Sora",sans-serif;font-weight:600;font-size:.7rem;color:#2E8B57;display:flex;align-items:center;gap:6px}
   .live-dot::before{content:"";width:7px;height:7px;border-radius:50%;background:#2E8B57;animation:pulse 1.6s ease-in-out infinite}
   @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
- 
+  .mock-body{padding:20px 22px 22px}
+  .chip-row{margin-bottom:18px}
+  .chip-sm{padding:8px 14px;font-size:.82rem}
+
   /* F1 — provenance */
   .prov-body{padding:22px 22px 24px}
   .prov-says{font-family:"Sora",sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);font-weight:600;margin-bottom:10px}
@@ -326,14 +331,7 @@
   .chip::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--blue);flex:0 0 auto}
   .chip:nth-child(3n)::before{background:var(--blue-bright)}
   .chip:nth-child(3n+1)::before{background:var(--navy)}
- 
-  .founders{margin-top:44px;display:flex;flex-direction:column;gap:20px}
-  .founder{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 32px;display:flex;gap:24px;align-items:center;box-shadow:var(--shadow-sm)}
-  .founder .avatar{width:62px;height:62px;border-radius:14px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Sora";font-weight:700;font-size:1.4rem;flex-shrink:0}
-  .founder .who{font-family:"Sora";font-weight:700;color:var(--navy);font-size:1.08rem}
-  .founder .what{color:var(--steel);font-size:.92rem}
-  .founder blockquote{font-family:"Lora",serif;font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.55;border:none}
- 
+
   /* ---------- App download ---------- */
   .app-band{background:linear-gradient(180deg,var(--paper),var(--paper-2))}
   .app-card{
@@ -417,7 +415,6 @@
     .nav-toggle span{display:block;width:18px;height:2px;background:var(--navy);position:relative}
     .nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--navy)}
     .nav-toggle span::before{top:-6px}.nav-toggle span::after{top:6px}
-    .founder{flex-direction:column;align-items:flex-start}
     .app-card{grid-template-columns:1fr;gap:34px;padding:36px 26px}
     .app-visual{order:-1}
     .cta-card{padding:44px 28px}
@@ -472,10 +469,10 @@
       <div class="hero-copy">
         <span class="eyebrow reveal">Civic Intelligence</span>
         <h1 class="reveal" data-delay="1">Government,<br>in <span class="accent">plain English.</span></h1>
-        <p class="lead reveal" data-delay="2">PolityAI turns dense legislative records and voting data into clear, trustworthy answers — so anyone can understand what their government is actually doing.</p>
+        <p class="lead reveal" data-delay="2">PolityAI turns dense legislative records and voting data into clear, trustworthy answers, so anyone can understand what their government is actually doing.</p>
         <div class="hero-cta reveal" data-delay="3">
           <a href="#demo" class="btn btn-primary">See it work <span class="arr">→</span></a>
-          <a href="#access" class="btn btn-ghost">Request early access</a>
+          <a href="#access" class="btn btn-ghost">Join the waitlist</a>
         </div>
         <div class="hero-proof reveal" data-delay="4">
           <span class="dot"></span> Every answer traced to the bill text and the roll-call vote.
@@ -507,7 +504,7 @@
     <div class="section-head reveal">
       <span class="eyebrow">The product</span>
       <h2>Read the law the way it was meant to be understood.</h2>
-      <p>Pick a bill. See the original statutory language, then switch to plain English — alongside what it does, who it affects, and how they voted.</p>
+      <p>Pick a bill. See the original statutory language, then switch to plain English to see what it does, who it affects, and how they voted.</p>
     </div>
  
     <div class="demo reveal" data-delay="1">
@@ -570,14 +567,14 @@
     <div class="section-head reveal">
       <span class="eyebrow">Why PolityAI</span>
       <h2>Clarity you can check, not spin you have to trust.</h2>
-      <p>Plenty of tools will tell you what to think about a bill. We tell you what the bill says — and let you decide.</p>
+      <p>Plenty of tools will tell you what to think about a bill. We tell you what the bill says and let you decide.</p>
     </div>
     <!-- Feature 01 — Built on the record -->
     <div class="feature-row reveal">
       <div class="feature-copy">
-        <span class="feature-num">01 — Built on the record</span>
+        <span class="feature-num">01 · Built on the record</span>
         <h3>Every claim traces back to the source.</h3>
-        <p>Other tools summarize and ask you to trust them. PolityAI cites. Each plain-English explanation is anchored to the exact statutory text and the roll-call vote — tap any claim to see what it's built on.</p>
+        <p>Other tools summarize and ask you to trust them. PolityAI cites. Each plain-English explanation is anchored to the exact statutory text and the roll-call vote, so tap any claim to see what it's built on.</p>
       </div>
       <div class="feature-stage">
         <svg class="stage-hex" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 L89.8 27 L89.8 73 L50 96 L10.2 73 L10.2 27 Z" fill="#1B3A5C"/></svg>
@@ -600,8 +597,8 @@
     <!-- Feature 02 — Plain English, full substance -->
     <div class="feature-row reverse reveal">
       <div class="feature-copy">
-        <span class="feature-num">02 — Plain English, full substance</span>
-        <h3>Plain English — without losing the fine print.</h3>
+        <span class="feature-num">02 · Plain English, full substance</span>
+        <h3>Plain English without losing the fine print.</h3>
         <p>We don't dumb bills down. Slide from raw statute to plain English to a one-line takeaway. The detail that actually changes how the law works survives every step.</p>
       </div>
       <div class="feature-stage">
@@ -621,9 +618,9 @@
     <!-- Feature 03 — Nonpartisan by design -->
     <div class="feature-row reveal">
       <div class="feature-copy">
-        <span class="feature-num">03 — Nonpartisan by design</span>
+        <span class="feature-num">03 · Nonpartisan by design</span>
         <h3>The vote, not the verdict.</h3>
-        <p>We show what a bill does and exactly how each side voted — never whether you should like it. Switch between the chamber total and the party split. We don't even color the parties; we just show the numbers.</p>
+        <p>We show what a bill does and exactly how each side voted, never whether you should like it. Switch between the chamber total and the party split. We don't even color the parties; we just show the numbers.</p>
       </div>
       <div class="feature-stage">
         <svg class="stage-hex" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 L89.8 27 L89.8 73 L50 96 L10.2 73 L10.2 27 Z" fill="#1B3A5C"/></svg>
@@ -644,9 +641,9 @@
     <!-- Feature 04 — Always current -->
     <div class="feature-row reverse reveal">
       <div class="feature-copy">
-        <span class="feature-num">04 — Always current</span>
-        <h3>Tracked as it moves — not after it's law.</h3>
-        <p>Bills don't sit still. PolityAI follows each one through committee, floor votes, and amendments in real time — so the summary you're reading reflects where the bill actually is right now.</p>
+        <span class="feature-num">04 · Always current</span>
+        <h3>Tracked as it moves, not after it becomes law.</h3>
+        <p>Bills don't sit still. PolityAI follows each one through committee, floor votes, and amendments in real time, so the summary you're reading reflects where the bill actually is right now.</p>
       </div>
       <div class="feature-stage">
         <svg class="stage-hex" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 L89.8 27 L89.8 73 L50 96 L10.2 73 L10.2 27 Z" fill="#1B3A5C"/></svg>
@@ -659,9 +656,38 @@
         </div>
       </div>
     </div>
+
+    <!-- Feature 05 — Personalized alerts -->
+    <div class="feature-row reveal">
+      <div class="feature-copy">
+        <span class="feature-num">05 · Personalized alerts</span>
+        <h3>Follow your reps. Hear about it the moment they vote.</h3>
+        <p>Sign up with your email and enter your address or ZIP to find your representatives; you don't need to know your district. Follow specific reps or the issues you care about, and get an email the instant one of them votes on something relevant to you.</p>
+      </div>
+      <div class="feature-stage">
+        <svg class="stage-hex" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 L89.8 27 L89.8 73 L50 96 L10.2 73 L10.2 27 Z" fill="#1B3A5C"/></svg>
+        <div class="feature-mock">
+          <div class="mock-bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="ttl">Alerts &amp; representatives</span>
+          </div>
+          <div class="mock-body">
+            <div class="prov-says">Following</div>
+            <div class="bill-pills chip-row">
+              <span class="chip chip-sm">Sen. Maria Castillo</span>
+              <span class="chip chip-sm">Privacy &amp; Technology</span>
+            </div>
+            <div class="lfi">
+              <span class="ltag">VOTE</span>
+              <div><div class="lmain">Sen. Maria Castillo voted <strong>Yea</strong> on S. 512, the Data Privacy Act</div><div class="lmeta">Matches a topic you follow · emailed to you instantly</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
- 
+
 <!-- ============ PROCESS ============ -->
 <section class="band proc-band" id="process">
   <div class="wrap">
@@ -684,12 +710,12 @@
       <div class="step reveal" data-delay="3">
         <div class="num">03</div>
         <h3>Verify</h3>
-        <p>Each explanation is anchored to the underlying text, so every claim is checkable against the source — not invented.</p>
+        <p>Each explanation is anchored to the underlying text, so every claim is checkable against the source rather than invented.</p>
       </div>
       <div class="step reveal" data-delay="4">
         <div class="num">04</div>
         <h3>Surface</h3>
-        <p>You get the what, the who, and the how-they-voted — searchable, shareable, and ready to act on.</p>
+        <p>You get the what, the who, and the how-they-voted: searchable, shareable, and ready to act on.</p>
       </div>
     </div>
   </div>
@@ -706,26 +732,6 @@
     <div class="marquee reveal" id="marquee" aria-label="Experience and recognition">
       <div class="marquee-track" id="marqueeTrack"></div>
     </div>
- 
-    <div class="founders">
-      <div class="founder reveal" data-delay="1">
-        <div class="avatar">E</div>
-        <div>
-          <div class="who">Emeric · Co-Founder &amp; CTO</div>
-          <div class="what" style="margin-bottom:10px">Columbia ’29 — building the engine that turns the legislative record into something a citizen can actually read.</div>
-          <blockquote>"The information is already public. The problem is that it's unreadable. PolityAI closes that gap."</blockquote>
-        </div>
-      </div>
- 
-      <div class="founder reveal" data-delay="2">
-        <div class="avatar">M</div>
-        <div>
-          <div class="who">Maekyla Massey · Co-Founder &amp; CEO</div>
-          <div class="what" style="margin-bottom:10px">Columbia — campaign strategist and two-time TEDx speaker who helped flip New York's 4th District, turning grassroots organizing into civic reach.</div>
-          <blockquote>"Democracy works best when the people it affects can actually take part in it — that's the movement PolityAI is built for."</blockquote>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
  
@@ -736,7 +742,7 @@
       <div class="app-copy">
         <span class="eyebrow">Mobile</span>
         <h2>Take PolityAI with you.</h2>
-        <p>Track bills, get plain-English alerts, and check how your representatives voted — right from your pocket.</p>
+        <p>Track bills, get plain-English alerts, and check how your representatives voted, right from your pocket.</p>
         <div class="store-row">
           <a class="store-btn" href="#" aria-label="Download on the App Store">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.42 2.21-1.14 3.02-.79.91-2.05 1.6-3.18 1.51-.13-1.1.42-2.27 1.13-3.02.79-.86 2.13-1.5 3.19-1.51zM20.5 17.3c-.55 1.27-.82 1.83-1.53 2.95-.99 1.56-2.39 3.5-4.12 3.51-1.54.01-1.94-1-4.03-.99-2.09.01-2.53 1.01-4.07.99-1.73-.01-3.05-1.76-4.04-3.32-2.81-4.24-3.17-9.24-1.15-12.02 1.13-1.56 2.92-2.48 4.6-2.48 1.71 0 2.79 1 4.21 1 1.38 0 2.22-1 4.2-1 1.5 0 3.09.81 4.22 2.21-3.71 2.03-3.11 7.33.87 9.15z"/></svg>
@@ -747,7 +753,7 @@
             <span><small>Get it on</small><strong>Google Play</strong></span>
           </a>
         </div>
-        <div class="app-soon"><span class="dot"></span> Coming soon — store links are placeholders for now.</div>
+        <div class="app-soon"><span class="dot"></span> Coming soon: store links are placeholders for now.</div>
       </div>
  
       <div class="app-visual reveal from-right" data-delay="1">
@@ -808,7 +814,7 @@
         <button class="btn btn-primary" id="signupBtn">Request access <span class="arr">→</span></button>
       </div>
       <div class="signup-done" id="signupDone">✓ You're on the list. We'll be in touch soon.</div>
-      <div class="signup-error" id="signupError">Something went wrong — try again in a moment.</div>
+      <div class="signup-error" id="signupError">Something went wrong. Try again in a moment.</div>
     </div>
   </div>
 </section>
@@ -828,7 +834,7 @@
           </svg>
           <span class="name" style="font-size:1.2rem">Polity<span class="ai">AI</span></span>
         </a>
-        <p style="color:var(--steel);font-size:.9rem">Civic intelligence — the legislative record, in plain English.</p>
+        <p style="color:var(--steel);font-size:.9rem">Civic intelligence: the legislative record, in plain English.</p>
       </div>
       <div class="foot-col">
         <h5>Product</h5>
@@ -860,9 +866,9 @@
       id:"hr2024", short:"H.R. 2024",
       title:"Online Personal Data Protection Act",
       meta:"H.R. 2024 · 118th Congress · Energy & Commerce",
-      sec:"Sec. 4 — Data Minimization",
+      sec:"Sec. 4. Data Minimization",
       orig:"A covered entity shall not collect, process, or transfer the covered data of an individual beyond what is reasonably necessary, proportionate, and limited to provide or maintain a specific product or service requested by such individual, except as expressly permitted under section 4(b). A covered entity shall provide each individual, in a clear and conspicuous manner, the means to withdraw any consent previously given.",
-      eng:"Companies can only collect the personal data they <strong>actually need</strong> to give you the product or service you asked for — nothing extra. And they have to give you an <strong>easy way to take back</strong> permission whenever you want.",
+      eng:"Companies can only collect the personal data they <strong>actually need</strong> to give you the product or service you asked for, nothing extra. They also have to give you an <strong>easy way to take back</strong> permission whenever you want.",
       what:"Limits how much personal data companies can collect about you, and lets you revoke consent.",
       who:"Anyone who uses online services, and most companies that handle consumer data.",
       status:"Reported out of committee",
@@ -873,7 +879,7 @@
       id:"hr881", short:"H.R. 881",
       title:"Rural Broadband Access Act",
       meta:"H.R. 881 · 118th Congress · Agriculture",
-      sec:"Sec. 2 — Grant Program",
+      sec:"Sec. 2. Grant Program",
       orig:"There are authorized to be appropriated to the Secretary such sums as may be necessary to establish a competitive grant program for the deployment of qualifying broadband infrastructure in unserved and underserved rural areas, provided that not less than 25 percent of amounts made available shall be reserved for projects principally serving persistent-poverty counties.",
       eng:"This sets aside federal money to help build <strong>high-speed internet</strong> in rural areas that don't have it. At least a <strong>quarter of the funding</strong> is reserved for the poorest counties.",
       what:"Funds construction of high-speed internet in rural and underserved areas.",
@@ -886,9 +892,9 @@
       id:"s512", short:"S. 512",
       title:"Small Business Tax Simplification Act",
       meta:"S. 512 · 118th Congress · Finance",
-      sec:"Sec. 3 — Expensing Limit",
+      sec:"Sec. 3. Expensing Limit",
       orig:"Section 179 of the Internal Revenue Code of 1986 is amended by striking '$1,000,000' and inserting '$1,500,000', and the dollar limitation under subsection (b)(1) shall be adjusted for inflation in taxable years beginning after the date of enactment in accordance with subsection (b)(6).",
-      eng:"Small businesses could <strong>immediately deduct up to $1.5 million</strong> in equipment purchases — up from $1 million — and that limit would <strong>rise with inflation</strong> each year.",
+      eng:"Small businesses could <strong>immediately deduct up to $1.5 million</strong> in equipment purchases, up from $1 million, and that limit would <strong>rise with inflation</strong> each year.",
       what:"Raises the amount small businesses can write off for equipment, indexed to inflation.",
       who:"Small business owners buying equipment or machinery.",
       status:"Introduced",
@@ -1083,7 +1089,7 @@
   var SOURCES = {
     s1:{label:"Statutory text · Sec. 4(a)", meta:false, text:"A covered entity shall not collect, process, or transfer the covered data of an individual beyond what is reasonably necessary, proportionate, and limited to provide or maintain a specific product or service requested by such individual."},
     s2:{label:"Statutory text · Sec. 4(c)", meta:false, text:"A covered entity shall provide each individual, in a clear and conspicuous manner, the means to withdraw any consent previously given."},
-    s3:{label:"Committee record", meta:true, text:"Energy & Commerce Committee — Reported favorably, 32–17, on March 12."}
+    s3:{label:"Committee record", meta:true, text:"Energy & Commerce Committee: reported favorably, 32–17, on March 12."}
   };
   var claims = document.querySelectorAll(".claim");
   var srcText = $("srcText"), srcLabel = $("srcLabel");
@@ -1106,7 +1112,7 @@
   /* ---- F2: reading-level slider ---- */
   var LEVELS = [
     {name:"Statute", statute:true, html:"Section 179 of the Internal Revenue Code of 1986 is amended by striking '$1,000,000' and inserting '$1,500,000', with the dollar limitation adjusted for inflation in taxable years beginning after the date of enactment."},
-    {name:"Plain English", statute:false, html:"Small businesses could <strong>immediately deduct up to $1.5 million</strong> in equipment purchases — up from $1 million — and that cap would <strong>rise with inflation</strong> each year."},
+    {name:"Plain English", statute:false, html:"Small businesses could <strong>immediately deduct up to $1.5 million</strong> in equipment purchases, up from $1 million, and that cap would <strong>rise with inflation</strong> each year."},
     {name:"TL;DR", statute:false, html:"Bigger instant write-off for small-business equipment: <strong>$1M → $1.5M</strong>, inflation-adjusted."}
   ];
   var slider = $("levelSlider"), levelText = $("levelText"), levelName = $("levelName");
@@ -1194,12 +1200,12 @@
   }
  
   var FEED = [
-    {tag:"VOTE", main:"H.R. 2024 — Amendment adopted, 14–9", meta:"Energy & Commerce"},
-    {tag:"MOVE", main:"SB-445 (IL) — Referred to Judiciary Committee", meta:"Illinois Senate"},
-    {tag:"STATUS", main:"HB-892 (TX) — Passed second reading", meta:"Texas House"},
-    {tag:"VOTE", main:"SB-678 (GA) — Scheduled for floor vote", meta:"Georgia Senate"},
-    {tag:"MOVE", main:"HB-1117 (CO) — Reported out of committee", meta:"Colorado House"},
-    {tag:"STATUS", main:"WA-HB-2089 — Public hearing set for Thursday", meta:"Washington House"}
+    {tag:"VOTE", main:"H.R. 2024: Amendment adopted, 14–9", meta:"Energy & Commerce"},
+    {tag:"MOVE", main:"SB-445 (IL): Referred to Judiciary Committee", meta:"Illinois Senate"},
+    {tag:"STATUS", main:"HB-892 (TX): Passed second reading", meta:"Texas House"},
+    {tag:"VOTE", main:"SB-678 (GA): Scheduled for floor vote", meta:"Georgia Senate"},
+    {tag:"MOVE", main:"HB-1117 (CO): Reported out of committee", meta:"Colorado House"},
+    {tag:"STATUS", main:"WA-HB-2089: Public hearing set for Thursday", meta:"Washington House"}
   ];
   var liveFeed = $("liveFeed");
   var feedIdx = 0, ages = [];
