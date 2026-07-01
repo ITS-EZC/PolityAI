@@ -1000,19 +1000,37 @@
     a.addEventListener("click", function(){ navLinks.classList.remove("open"); });
   });
  
-  /* ---------- Signup (client-side only) ---------- */
+  /* ---------- Signup (posts to /api/waitlist, backed by Supabase) ---------- */
   var signupBtn = $("signupBtn");
   signupBtn.addEventListener("click", function(){
-    var email = $("email").value.trim();
+    var emailField = $("email");
+    var email = emailField.value.trim();
     var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if(!valid){
-      $("email").style.borderColor = "#E08A8A";
-      $("email").focus();
+      emailField.style.borderColor = "#E08A8A";
+      emailField.focus();
       return;
     }
-    $("signup").style.display = "none";
-    var done = $("signupDone");
-    done.style.display = "flex";
+    signupBtn.disabled = true;
+    fetch("/api/waitlist", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email })
+    })
+      .then(function(r){ return r.json().then(function(data){ return { ok: r.ok, data: data }; }); })
+      .then(function(res){
+        if(!res.ok || !res.data.ok) throw new Error(res.data && res.data.error);
+        $("signup").style.display = "none";
+        var done = $("signupDone");
+        done.textContent = res.data.alreadyOnList
+          ? "✓ You're already on the list."
+          : "✓ You're on the list. We'll be in touch soon.";
+        done.style.display = "flex";
+      })
+      .catch(function(){
+        signupBtn.disabled = false;
+        emailField.style.borderColor = "#E08A8A";
+      });
   });
   $("email").addEventListener("input", function(){ this.style.borderColor = ""; });
  
